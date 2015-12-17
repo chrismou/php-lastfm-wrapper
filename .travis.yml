@@ -19,11 +19,14 @@ before_script:
 
 script:
   - bash -c 'if [ "$TRAVIS_PHP_VERSION" == "hhvm" ]; then vendor/bin/phpunit; fi;'
-  - bash -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then vendor/bin/phpunit --coverage-clover build/logs/clover.xml; fi;'
+  - bash -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then vendor/bin/phpunit --coverage-clover
+    build/logs/clover.xml; fi;'
 
 after_script:
   - bash -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then CODECLIMATE_REPO_TOKEN=a47a2adbc57fd293049edf053610fb0025810e7098cfee1dc48026256699638b ./vendor/bin/test-reporter; fi;'
 
 notifications:
+
   slack:
-    secure: hHAp5WryuNPab0dhzP4mAnJ5wSY1y1jwFoF3GFBKDSq81Dfngis5JuXQc7Fej7amZZd6MhP4bCHuaGsPNMTo3wpoOhJDQeMU8f2stXSlAfQc2QbcbJhwE1svjrMrzo976zSdchRyVcndFVKLZnxfHmTg5IPB4HudG8hIKuRcUD8=
+    rooms:
+      secure: VooPz0xMml83m6utJkZaJTlsgCUOvk/z22+M/DAJCHElX7aurIw1XrM7FqlW1FKv11QHznL/GpKmU1ZZF40LzFy8+KyAzvY3O/iBUHFKAr1P/Bq5NWxt6mIxVErFFCIZkv6+uvMW2WvXCr2TEoYkxvX4g4fVW+6IRi4EK4YqgrsLBRTwVAJIA9Wfu4l07dnQPRxYWqcjw7mtkWnYmqbraXoXaQdZBaVqaCIzJRo4KqVTAC6/V64mIBDRh6cw22NbpV7JSWAuVCasuQ3eGUYg6OSZ4EYo90aCE8WxRMcqDauuYouUXAzfgpcxYopqO5ALixojhAudEtJm1lDCHBuWL2plhgaDDtjxu5SR0ynpp7MrYxL1uQ9ky1TllO3cJhamsJ2IXSXpJrrkDwmyE6tnmSQDWcVzFUTBZYBpDbxe0o3q7wqHIxVhPrHFdUJubal2RO7HPRUJoPtkmAdxPQW2NEMT6vhL/r8bePpzDKNjD7nIiailEYUdGfsMiM/Y9inHtMBzWAVwPy56K04UADdLWtkXt/fwvgh08jl2B7QQsOQbvyiTyNC0cWH+1VCJFU+lb/uBTPvTHGsyx1hjPkwskLxB1WyAmRajzrReHn9F5r2BvseSAei6jeRc/7NaXS7NfUbKj1tUW2VqmmtE1N4HFyfSTUudOccbmvM04SEC3z8=
