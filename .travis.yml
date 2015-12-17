@@ -1,0 +1,29 @@
+language: php
+
+sudo: false
+
+php:
+  - 5.5
+  - 5.6
+  - 7.0
+  - hhvm
+
+matrix:
+  allow_failures:
+    - php: hhvm
+
+before_script:
+  - travis_retry composer self-update
+  - travis_retry composer install
+  - mkdir -p build/logs
+
+script:
+  - bash -c 'if [ "$TRAVIS_PHP_VERSION" == "hhvm" ]; then vendor/bin/phpunit; fi;'
+  - bash -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then vendor/bin/phpunit --coverage-clover build/logs/clover.xml; fi;'
+
+after_script:
+  - bash -c 'if [ "$TRAVIS_PHP_VERSION" != "hhvm" ]; then CODECLIMATE_REPO_TOKEN=a47a2adbc57fd293049edf053610fb0025810e7098cfee1dc48026256699638b ./vendor/bin/test-reporter; fi;'
+
+notifications:
+  slack:
+    secure: hHAp5WryuNPab0dhzP4mAnJ5wSY1y1jwFoF3GFBKDSq81Dfngis5JuXQc7Fej7amZZd6MhP4bCHuaGsPNMTo3wpoOhJDQeMU8f2stXSlAfQc2QbcbJhwE1svjrMrzo976zSdchRyVcndFVKLZnxfHmTg5IPB4HudG8hIKuRcUD8=
