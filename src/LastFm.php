@@ -58,10 +58,10 @@ class LastFm
      * @return mixed
      * @throws \Exception
      */
-    public function get($method, $parameters = [], $doRequestAuth = false)
+    public function get($method, array $parameters = [], $authRequired = false)
     {
         $method = str_replace('_', '.', $method);
-        return $this->doRequest($method, $parameters, $doRequestAuth);
+        return $this->doRequest($method, $parameters, $authRequired);
     }
 
     /**
