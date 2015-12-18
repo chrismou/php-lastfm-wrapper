@@ -70,9 +70,10 @@ class LastFm
      * @param bool $doRequestAuth
      *
      * @return \stdClass
-     * @throws \Exception
+     * @throws \Chrismou\LastFm\Exception\ResponseMalformedException
+     * @throws \Chrismou\LastFm\Exception\ResponseErrorException
      */
-    protected function doRequest($method, $parameters = [], $doRequestAuth = false)
+    protected function doRequest($method, array $parameters = [], $doRequestAuth = false)
     {
         // We automatically append a few parameters here.
         $parameters = array_merge(

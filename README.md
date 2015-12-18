@@ -46,4 +46,4 @@ Released under the BSD License. See [LICENSE](LICENSE.md).
 
 ## Thanks to
 
-[dandelionmood/php-lastfm](https://github.com/dandelionmood/php-lastfm), the original inspiration for the plugin.
+[dandelionmood/php-lastfm](https://github.com/dandelionmood/php-lastfm), the original inspiration for the library.
