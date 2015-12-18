@@ -146,7 +146,7 @@ class LastFmTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException \Exception
+     * @expectedException \Chrismou\LastFm\Exception\ResponseMalformedException
      */
     public function it_throws_an_exception_when_invalid_json()
     {
@@ -162,7 +162,7 @@ class LastFmTest extends PHPUnit_Framework_TestCase
 
     /**
      * @test
-     * @expectedException \Exception
+     * @expectedException \Chrismou\LastFm\Exception\ResponseErrorException
      */
     public function it_throws_an_exception_when_api_returns_error()
     {

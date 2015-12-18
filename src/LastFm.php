@@ -100,12 +100,12 @@ class LastFm
 
         // The JSON couldn't be decoded
         if ($response === null) {
-            throw new \Exception("Error parsing JSON");
+            throw new \Chrismou\LastFm\Exception\ResponseMalformedException("Error parsing JSON");
         }
 
         // An error has occurred
         if (!empty($response->error)) {
-            throw new \Exception("[{$response->error}|{$response->message}] "
+            throw new \Chrismou\LastFm\Exception\ResponseErrorException("[{$response->error}|{$response->message}] "
                 .implode(', ', $response->links) . "\n" . http_build_query($parameters));
         }
 

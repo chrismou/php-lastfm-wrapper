@@ -5,12 +5,12 @@
 [![Code Climate](https://codeclimate.com/github/chrismou/php-lastfm-wrapper/badges/gpa.svg)](https://codeclimate.com/github/chrismou/php-lastfm-wrapper)
 
 A dead simple wrapper class for the last.fm API. After using a couple of existing last.fm wrapper classes, it became 
-obvious that most were either a) Incomplete, b) Long abandoned, or c) Poorly unit tested. After the August 2015 last.fm
+obvious that most were either a) Incomplete, b) Seemingly abandoned, or c) Poorly unit tested. After the August 2015 last.fm
 redesign, the library I'd settled with started throwing unexepected errors. At this point, I decided it might be simpler 
 to just write my own.
 
 This library aims to address these issues, providing a simple, centralised way of calling any method on the last.fm API, 
-meaning it should support all future API additions out of the box. It also includes an extensive set of unit tests.
+meaning it should support all future API additions out of the box. It also includes an full set of unit tests.
 
 
 ## Install
