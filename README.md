@@ -42,7 +42,7 @@ If you use docker, you can also run the test suite against all supported PHP ver
 
 ## License
 
-Released under the BSD License. See [LICENSE](LICENSE.md).
+Released under the MIT License. See [LICENSE](LICENSE.md).
 
 ## Thanks to
 
