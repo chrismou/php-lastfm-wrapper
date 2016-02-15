@@ -2,5 +2,7 @@
 
 namespace Chrismou\LastFm\Exception;
 
-class ResponseErrorException extends \Exception {
+class ResponseErrorException extends \Exception
+{
+
 }
