@@ -23,7 +23,30 @@ composer require chrismou/lastfm
 
 ## Usage
 
-Docs to follow
+First you need an API key and secret from Last.FM.  You can obtain one by signing up here: [http://www.last.fm/api](http://www.last.fm/api)
+
+To set up the last.fm API client:
+
+```
+$lastfm = new \Chrismou\lastfm(
+    new GuzzleHttp\Client(),
+    YOUR_API_KEY,
+    YOUR_API_SECRET
+);
+```
+
+The format for calls is: `$lastfm->get($method, $parameters);`, where method is the last.fm api method name.
+
+So, if you wanted to get info on an artist, you could run:
+
+```
+$lastfm->get('artist.getInfo', 'cher');
+```
+
+This makes a request and returns all info on the Artist 'Cher'.
+
+Please refer to the [last.fm api documentation](http://www.last.fm/api) for a full list of available methods and required parameters.
+
 
 ## Tests
 
