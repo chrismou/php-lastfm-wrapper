@@ -55,7 +55,7 @@ class LastFm
      * @param array $parameters
      * @param bool $doRequestAuth
      *
-     * @return mixed
+     * @return \stdClass
      * @throws \Exception
      */
     public function get($method, array $parameters = [], $authRequired = false)
