@@ -124,7 +124,7 @@ class LastFm
             $parameters['sk'] = $this->sessionKey;
         }
 
-        // Bug : you have to get rid of format parameter to compute the api_sig parameter.
+        // The api_sig computation shouldn't include the "format" parameter
         // http://www.last.fm/group/Last.fm+Web+Services/forum/21604/_/428269/1#f18907544
         $fixedParameters = $parameters;
         unset($fixedParameters['format']);
