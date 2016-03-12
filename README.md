@@ -28,7 +28,7 @@ First you need an API key and secret from Last.FM.  You can obtain one by signin
 To set up the last.fm API client:
 
 ```
-$lastfm = new \Chrismou\lastfm(
+$lastfm = new \Chrismou\LastFm\LastFm(
     new GuzzleHttp\Client(),
     YOUR_API_KEY,
     YOUR_API_SECRET
