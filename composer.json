@@ -1,6 +1,6 @@
 {
     "name": "chrismou/lastfm",
-    "description": "A simple last.fm api wrapper for PHP",
+    "description": "A simple but fully featured Last.fm API wrapper, with Guzzle 6 support",
     "type": "library",
     "license": "MIT",
     "authors": [
