@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/chrismou/php-lastfm-wrapper.svg?branch=master)](https://travis-ci.org/chrismou/php-lastfm-wrapper)
 [![Test Coverage](https://codeclimate.com/github/chrismou/php-lastfm-wrapper/badges/coverage.svg)](https://codeclimate.com/github/chrismou/php-lastfm-wrapper/coverage)
 [![Code Climate](https://codeclimate.com/github/chrismou/php-lastfm-wrapper/badges/gpa.svg)](https://codeclimate.com/github/chrismou/php-lastfm-wrapper)
+[![Buy me a beer](https://img.shields.io/badge/donate-PayPal-019CDE.svg)](https://www.paypal.me/chrismou)
 
 A dead simple wrapper class for the last.fm API. After using a couple of existing last.fm wrapper classes, it became 
 obvious that most were either a) Incomplete, b) Seemingly abandoned, or c) Poorly unit tested. After the August 2015 last.fm
